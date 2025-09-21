@@ -1,14 +1,17 @@
-/*
- * trapezoidal_rule
- * ----------------
- * Approximates the integral of a function f(x) from a to b
- * using the composite Trapezoidal Rule with n subintervals.
- */
-double trapezoidal_rule(double (*f)(double), double a, double b, int n) {
-    double h = (b - a) / n;
-    double sum = f(a) + f(b);
-    for (int i = 1; i < n; i++) {
-        sum += 2 * f(a + i * h);
+// Simpson's rule requires an even number of subintervals
+    if (n % 2 != 0) {
+        printf("Simpson's rule requires even n, so using n+1.\n");
+        n++;
     }
-    return (h / 2.0) * sum;
-}
+    // Compute integrals using both methods
+    double trap1 = trapezoidal_rule(f1, a1, b1, n);
+    double simp1 = simpsons_rule(f1, a1, b1, n);
+
+    double trap2 = trapezoidal_rule(f2, a2, b2, n);
+    double simp2 = simpsons_rule(f2, a2, b2, n);
+
+    // Calculate percentage errors
+    double error_trap1 = fabs(trap1 - exact1) / exact1 * 100.0;
+    double error_simp1 = fabs(simp1 - exact1) / exact1 * 100.0;
+    double error_trap2 = fabs(trap2 - exact2) / exact2 * 100.0;
+    double error_simp2 = fabs(simp2 - exact2) / exact2 * 100.0;
