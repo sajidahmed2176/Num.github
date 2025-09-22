@@ -88,3 +88,13 @@ double trapezoidal_rule(double (*f)(double), double a, double b, int n) {
     }
     return (h / 2.0) * sum;
 }
+int main()
+int values[]={3,4,5,6};
+int weight[]=2,3,4,5};
+int w=8;
+int n=sizeof(values)/sizeof(values[0]);
+printf(
+"maximum value that can be put in knapsack : %d\n",
+  knapsackrecursive(w,wight,values,n));
+retun 0;
+}
