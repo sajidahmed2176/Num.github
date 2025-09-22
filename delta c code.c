@@ -57,3 +57,4 @@ double error_trap1 =fabs(trap1 - exact1) / exact1 * 100.0;
 double error_simp1 =fabs(simp1 - exact1) / exact1 * 100.0;
 double error_trap2 =fabs(trap2-exact2) / exact2 * 100.0;
 double error_simp2 =fabs(simp2 -exact2) / exact2 * 100.0;
+double space
