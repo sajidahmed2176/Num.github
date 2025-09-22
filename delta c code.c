@@ -71,3 +71,20 @@ double error_simp2 =fabs(simp2 -exact2) / exact2 * 100.0;
 
     return 0;
 }
+
+/* ==========================================================
+ * Function: trapezoidal_rule
+ * Purpose : Approximates ∫ f(x) dx from a to b
+ * Method  : Composite Trapezoidal Rule
+ * Inputs  : f -> pointer to function, a -> lower limit, b -> upper limit, n -> number of intervals
+ * Returns : approximate integral value
+ * ========================================================== */
+double trapezoidal_rule(double (*f)(double), double a, double b, int n) {
+    double h = (b - a) / n;
+    double sum = f(a) + f(b);
+
+    for (int i = 1; i < n; i++) {
+        sum += 2 * f(a + i * h);
+    }
+    return (h / 2.0) * sum;
+}
