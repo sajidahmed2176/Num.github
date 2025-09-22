@@ -88,30 +88,78 @@ double trapezoidal_rule(double (*f)(double), double a, double b, int n) {
     }
     return (h / 2.0) * sum;
 }
-int main()
-int values[]={3,4,5,6};
-int weight[]=2,3,4,5};
-int w=8;
-int n=sizeof(values)/sizeof(values[0]);
-printf(
-"maximum value that can be put in knapsack : %d\n",
-  knapsackrecursive(w,wight,values,n));
-retun 
 #include <stdio.h>
 
-void bubbleSort(int arr[], int n) {
-    int i, j, temp;
+void selectionSort(int arr[], int n) {
+    int i, j, minIndex, temp;
     for (i = 0; i < n - 1; i++) {
-        for (j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                // swap arr[j] and arr[j+1]
-                temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+        minIndex = i;   // assume the first element is the minimum
+        for (j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;  // update minimum index
             }
+        }
+        // swap if new minimum is found
+        if (minIndex != i) {
+            temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
         }
     }
 }
 
 int main() {
-    in
+    int arr[100], n, i;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter %d elements:\n", n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    selectionSort(arr, n);
+
+    printf("Sorted array: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+#include <stdio.h>
+
+void insertionSort(int arr[], int n) {
+    int i, key, j;
+    for (i = 1; i < n; i++) {
+        key = arr[i];   // current element
+        j = i - 1;
+
+        // Move elements that are greater than key one step ahead
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;  // insert key in correct position
+#include <stdio.h>
+#define N 4   // Change this for different N
+
+int board[N][N];
+
+// Check if placing queen is safe
+int isSafe(int row, int col) {
+    int i, j;
+
+    // Check this row on left
+    for (i = 0; i < col; i++)
+        if (board[row][i])
+            return 0;
+
+    // Check upper diagonal on left
+    for (i = row, j = col; i >= 0 && j >= 0; i--, j--)
+        if (board[i]
+Knapsack(i, W) = max(
+    value[i] + Knapsack(i-1, W - weight[i]),   // take item
+    Knapsack(i-1, W)                           // don’t take item
+)
+
