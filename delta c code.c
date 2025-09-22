@@ -97,4 +97,14 @@ printf(
 "maximum value that can be put in knapsack : %d\n",
   knapsackrecursive(w,wight,values,n));
 retun 0;
+}}
+int main()
+int values[]={3,4,5,6};
+int weight[]=2,3,4,5};
+int w=8;
+int n=sizeof(values)/sizeof(values[0]);
+printf(
+"maximum value that can be put in knapsack : %d\n",
+  knapsackrecursive(w,wight,values,n));
+retun 0;
 }
