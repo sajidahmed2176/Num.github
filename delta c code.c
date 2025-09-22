@@ -58,12 +58,16 @@ double error_simp1 =fabs(simp1 - exact1) / exact1 * 100.0;
 double error_trap2 =fabs(trap2-exact2) / exact2 * 100.0;
 double error_simp2 =fabs(simp2 -exact2) / exact2 * 100.0;
 
-char weight
-double boss
-int profit 100
-  weight+profit
-  real profit 
-weight+profit
-  weight
-int 1,n=2,i,j;
-for(j=1;i>=j;j++)
+/* --- Display results --- */
+    printf("\n--- Numerical Integration Results ---\n");
+
+    printf("\n1) Integral of sin(x) from 0 to π:\n");
+    printf("   • Trapezoidal Rule Result = %.8lf | Error %% = %.6lf%%\n", trap1, error_trap1);
+    printf("   • Simpson's Rule Result  = %.8lf | Error %% = %.6lf%%\n", simp1, error_simp1);
+
+    printf("\n2) Integral of ln(x) from 1 to 2:\n");
+    printf("   • Trapezoidal Rule Result = %.8lf | Error %% = %.6lf%%\n", trap2, error_trap2);
+    printf("   • Simpson's Rule Result  = %.8lf | Error %% = %.6lf%%\n", simp2, error_simp2);
+
+    return 0;
+}
