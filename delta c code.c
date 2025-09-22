@@ -96,15 +96,22 @@ int n=sizeof(values)/sizeof(values[0]);
 printf(
 "maximum value that can be put in knapsack : %d\n",
   knapsackrecursive(w,wight,values,n));
-retun 0;
-}}
-int main()
-int values[]={3,4,5,6};
-int weight[]=2,3,4,5};
-int w=8;
-int n=sizeof(values)/sizeof(values[0]);
-printf(
-"maximum value that can be put in knapsack : %d\n",
-  knapsackrecursive(w,wight,values,n));
-retun 0;
+retun 
+#include <stdio.h>
+
+void bubbleSort(int arr[], int n) {
+    int i, j, temp;
+    for (i = 0; i < n - 1; i++) {
+        for (j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // swap arr[j] and arr[j+1]
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
 }
+
+int main() {
+    in
