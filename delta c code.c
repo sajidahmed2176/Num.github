@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include <math.h>
-
+#include<stdio.h>
+#include<math.h>
 /*
  * CSE261 Group Assignment
  * Topic: Implementation and Comparison of Simpson's and Trapezoidal Rules
@@ -13,10 +12,16 @@
  *
  * This program calculates the definite integrals of:
  *   (1) sin(x) from 0 to π
- *   (2) ln(x) from 1 to 2
+ *   (2) ln(x)  from 1 to 2
  * using the Trapezoidal Rule and Simpson's Rule,
  * then compares the results with their exact values.
  */
-// Function prototypes
-double trapezoidal_rule(double (*f)(double), double a, double b, int n);
-double simpsons_rule(double (*f)(double), double a, double b, int n);
+
+
+/* ---------- Function Prototypes ---------- */
+double trapezoidal_rule(double(*f)(double),double a,double b,int n);
+double simpsons_rule(double(*f)(double),double a,double b,int n);
+/*Function to integrate*/
+
+double f1(double x) {return sin(x);}//f1=sin(x)
+double f2(double x) {return log(x);}//f2=ln(x)
