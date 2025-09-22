@@ -20,7 +20,3 @@
 // Function prototypes
 double trapezoidal_rule(double (*f)(double), double a, double b, int n);
 double simpsons_rule(double (*f)(double), double a, double b, int n);
-
-// Functions to integrate
-double f1(double x) { return sin(x); }   // f1(x) = sin(x)
-double f2(double x) { return log(x); }   // f2(x) = ln(x)
