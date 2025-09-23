@@ -70,6 +70,8 @@ int main() {
     return 0;
 }
 
+//Function: trapezoidal_rule
+
 double trapezoidal_rule(double (*f)(double), double a, double b, int n) {
     double h = (b - a) / n;
     double sum = f(a) + f(b);
@@ -78,6 +80,8 @@ double trapezoidal_rule(double (*f)(double), double a, double b, int n) {
     }
     return (h / 2.0) * sum;
 }
+
+//Function: simpsons_rule
 
 double simpsons_rule(double (*f)(double), double a, double b, int n) {
     double h = (b - a) / n;
@@ -90,6 +94,8 @@ double simpsons_rule(double (*f)(double), double a, double b, int n) {
     }
     return (h / 3.0) * sum;
 }
+
+
 --- Sample output n=10 ---
 
 1) Integral of sin(x) from 0 to π:
@@ -101,7 +107,7 @@ double simpsons_rule(double (*f)(double), double a, double b, int n) {
    Simpson's   = 0.38629441 | Error = 0.000000%
 
 ---
-```
+
 ![fdf](compare.jpg)
 ![fdf](compare2.jpg)
 
