@@ -1,4 +1,4 @@
-# Numerical Assignment:Implement Simpson’s Rule. Compare its accuracy with the Trapezoidal Rule on at least two integrals (e.g., `sin(x)`dx from 0 to π , `ln(x)`dx from 1 to 2 )
+# Numerical Assignment:Implement Simpson’s Rule. Compare its accuracy with the Trapezoidal Rule on at least two integrals (`sin(x)`dx from 0 to π , `ln(x)`dx from 1 to 2)
 
 
 ## (I) Introduction
