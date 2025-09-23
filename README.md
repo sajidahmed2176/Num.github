@@ -89,8 +89,15 @@ double simpsons_rule(double (*f)(double), double a, double b, int n) {
     }
     return (h / 3.0) * sum;
 }
-css
-Copy code
+--- Sample output n=10 ---
+
+1) Integral of sin(x) from 0 to π:
+   Trapezoidal = 1.98352354 | Error = 0.823823%
+   Simpson's   = 2.00010952 | Error = 0.005476%
+
+2) Integral of ln(x) from 1 to 2:
+   Trapezoidal = 0.38631871 | Error = 0.004044%
+   Simpson's   = 0.38629441 | Error = 0.000000%
 
 ---
 ```
