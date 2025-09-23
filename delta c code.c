@@ -90,11 +90,8 @@ double trapezoidal_rule(double (*f)(double), double a, double b, int n) {
 }
 
 /* ==========================================================
- * Function: simpsons_rule
- * Purpose : Approximates ∫ f(x) dx from a to b
- * Method  : Composite Simpson's Rule (n must be even)
- * Inputs  : f -> pointer to function, a -> lower limit, b -> upper limit, n -> number of intervals
- * Returns : approximate integral value
+ Simpson's Rule: Finds area under integral f(x) from a to b  
+   Works only if n (intervals) is even.
  * ========================================================== */
 double simpsons_rule(double (*f)(double), double a, double b, int n) {
 double h = (b-a) / n;
