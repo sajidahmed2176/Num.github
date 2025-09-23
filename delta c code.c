@@ -105,3 +105,189 @@ for(int i = 1; i < n; i++){
 }
 return (h /3.0) * sum;
 }
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#define MAX 5
+
+int stack[MAX];
+int top = -1;
+
+// Push operation
+void push(int value) {
+    if (top == MAX - 1) {
+        printf("Stack Overflow\n");
+    } else {
+        stack[++top] = value;
+        printf("%d pushed to stack\n", value);
+    }
+}
+
+// Pop operation
+void pop() {
+    if (top == -1) {
+        printf("Stack Underflow\n");
+    } else {
+        printf("%d popped from stack\n", stack[top--]);
+    }
+}
+
+// Display stack elements
+void displayStack() {
+    if (top == -1) {
+        printf("Stack is empty\n");
+    } else {
+        printf("Stack elements: ");
+        for (int i = top; i >= 0; i--) {
+            printf("%d ", stack[i]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    push(10);
+    push(20);
+    push(30);
+    displayStack();
+    pop();
+    displayStack();
+    return 0;
+}
+#include <stdio.h>
+#define MAX 5
+
+int queue[MAX];
+int front = -1, rear = -1;
+
+// Enqueue operation
+void enqueue(int value) {
+    if (rear == MAX - 1) {
+        printf("Queue Overflow\n");
+    } else {
+        if (front == -1) front = 0;
+        queue[++rear] = value;
+        printf("%d enqueued to queue\n", value);
+    }
+}
+
+// Dequeue operation
+void dequeue() {
+    if (front == -1 || front > rear) {
+        printf("Queue Underflow\n");
+    } else {
+        printf("%d dequeued from queue\n", queue[front++]);
+    }
+}
+
+// Display queue elements
+void displayQueue() {
+    if (front == -1 || front > rear) {
+        printf("Queue is empty\n");
+    } else {
+        printf("Queue elements: ");
+        for (int i = front; i <= rear; i++) {
+            printf("%d ", queue[i]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+    displayQueue();
+    dequeue();
+    displayQueue();
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+// Node structure
+struct Node {
+    int data;
+    struct Node *left, *right;
+};
+
+// Function to create a new node
+struct Node* createNode(int value) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = value;
+    newNode->left = newNode->right = NULL;
+    return newNode;
+}
+
+// Insert node into Binary Search Tree (BST)
+struct Node* insert(struct Node* root, int value) {
+    if (root == NULL) {
+        return createNode(value);
+    }
+    if (value < root->data) {
+        root->left = insert(root->left, value);
+    } else if (value > root->data) {
+        root->right = insert(root->right, value);
+    }
+    return root;
+}
+
+// Inorder Traversal (Left → Root → Right)
+void inorder(struct Node* root) {
+    if (root != NULL) {
+        inorder(root->left);
+        printf("%d ", root->data);
+        inorder(root->right);
+    }
+}
+
+// Preorder Traversal (Root → Left → Right)
+void preorder(struct Node* root) {
+    if (root != NULL) {
+        printf("%d ", root->data);
+        preorder(root->left);
+        preorder(root->right);
+    }
+}
+
+// Postorder Traversal (Left → Right → Root)
+void postorder(struct Node* root) {
+    if (root != NULL) {
+        postorder(root->left);
+        postorder(root->right);
+        printf("%d ", root->data);
+    }
+}
+
+int main() {
+    struct Node* root = NULL;
+
+    // Insert elements into the tree
+    root = insert(root, 50);
+    insert(root, 30);
+    insert(root, 70);
+    insert(root, 20);
+    insert(root, 40);
+    insert(root, 60);
+    insert(root, 80);
+
+    printf("Inorder Traversal: ");
+    inorder(root);
+    printf("\n");
+
+    printf("Preorder Traversal: ");
+    preorder(root);
+    printf("\n");
+
+    printf("Postorder Traversal: ");
+    postorder(root);
+    printf("\n");
+
+    return 0;
+}
