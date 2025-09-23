@@ -109,6 +109,7 @@ double simpsons_rule(double (*f)(double), double a, double b, int n) {
    Simpson's   = 0.38629441 | Error = 0.000000%
 
 ```
+
 ##(IV) Error Analysis 
 
 ![fdf](compare.jpg)
