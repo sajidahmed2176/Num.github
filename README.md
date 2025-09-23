@@ -110,7 +110,7 @@ double simpsons_rule(double (*f)(double), double a, double b, int n) {
 
 ```
 
-##(IV) Error Analysis 
+## (IV) Error Analysis 
 
 ![fdf](compare.jpg)
 ![fdf](compare2.jpg)
