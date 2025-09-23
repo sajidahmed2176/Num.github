@@ -1,4 +1,5 @@
-# Numerical Integration: Simpson’s Rule vs Trapezoidal Rule
+# Numerical Assignment:Implement Simpson’s Rule. Compare its accuracy with the Trapezoidal Rule on at least two integrals (e.g., 0sin(x) dx, 12ln(x) dx)
+
 
 ## (I) Introduction
 Numerical integration is widely used when analytical evaluation of an integral is difficult or impossible.  
