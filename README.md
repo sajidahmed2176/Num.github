@@ -95,7 +95,7 @@ double simpsons_rule(double (*f)(double), double a, double b, int n) {
     return (h / 3.0) * sum;
 }
 
-```text
+```c
 
 
 --- Sample output n=10 ---
@@ -109,11 +109,12 @@ double simpsons_rule(double (*f)(double), double a, double b, int n) {
    Simpson's   = 0.38629441 | Error = 0.000000%
 
 ```
+##(IV) Error Analysis 
 
 ![fdf](compare.jpg)
 ![fdf](compare2.jpg)
 
-## (IV) Conclusion
+## (V) Conclusion
 
 - Simpson’s Rule is generally more accurate than Trapezoidal Rule for smooth functions.
 - Trapezoidal Rule gives a reasonable approximation but with higher error.
