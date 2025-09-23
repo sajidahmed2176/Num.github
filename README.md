@@ -95,6 +95,8 @@ double simpsons_rule(double (*f)(double), double a, double b, int n) {
     return (h / 3.0) * sum;
 }
 
+```text
+
 
 --- Sample output n=10 ---
 
@@ -106,7 +108,7 @@ double simpsons_rule(double (*f)(double), double a, double b, int n) {
    Trapezoidal = 0.38631871 | Error = 0.004044%
    Simpson's   = 0.38629441 | Error = 0.000000%
 
----
+```
 
 ![fdf](compare.jpg)
 ![fdf](compare2.jpg)
