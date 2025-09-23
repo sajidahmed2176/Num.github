@@ -1,13 +1,4 @@
-# Numerical Assignment:Implement Simpson’s Rule. Compare its accuracy with the Trapezoidal Rule on at least two integrals (e.g., Integral of `sin(x)` from 0 to π  
-   \[
-   \int_{0}^{\pi} \sin(x) \, dx
-   \]
-
- Integral of `ln(x)` from 1 to 2  
-   \[
-   \int_{1}^{2} \ln(x) \, dx
-   \]
-)
+# Numerical Assignment:Implement Simpson’s Rule. Compare its accuracy with the Trapezoidal Rule on at least two integrals (e.g., Integral of `sin(x)` from 0 to π ,Integral of `ln(x)` from 1 to 2 )
 
 
 ## (I) Introduction
