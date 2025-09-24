@@ -76,6 +76,11 @@ double error_simp2 =fabs(simp2 -exact2) / exact2 * 100.0;
     return 0;
 }
 
+/* 
+ * Function: trapezoidal_rule
+ * Purpose : Approximates ∫ f(x) dx from a to b
+ * Returns : approximate integral value
+ */
 
 double trapezoidal_rule(double (*f)(double), double a, double b, int n) {
     double h = (b - a) / n;
