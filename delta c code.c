@@ -85,10 +85,10 @@ double trapezoidal_rule(double (*f)(double), double a, double b, int n) {
     return (h / 2.0) * sum;
 }
 
-/* ==========================================================
+/* 
  Simpson's Rule: Finds area under integral f(x) from a to b  
-   Works only if n (intervals) is even.
- * ========================================================== */
+ Works only if n (intervals) is even.
+  */
 double simpsons_rule(double (*f)(double), double a, double b, int n) {
 double h = (b-a) / n;
 double sum = f(a) + f(b);
