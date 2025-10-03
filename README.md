@@ -121,3 +121,6 @@ double simpsons_rule(double (*f)(double), double a, double b, int n) {
 - Trapezoidal Rule gives a reasonable approximation but with higher error.
 - Increasing the number of intervals improves accuracy, with Simpson’s Rule converging faster.
 - This project demonstrates the practical advantage of Simpson’s Rule in numerical integration.
+
+### Contributors
+[![Contributors](https://contrib.rocks/image?repo=sajidahmed2176/Num.github)](https://github.com/sajidahmed2176/Num.github/graphs/contributors)
